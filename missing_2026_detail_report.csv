@@ -1,0 +1,113 @@
+NAME,COUNTRY,AR_SCORE,AR_RANK,ER_SCORE,ER_RANK,FSR_SCORE,FSR_RANK,CPF_SCORE,CPF_RANK,IFR_SCORE,IFR_RANK,ISR_SCORE,ISR_RANK,ISD_SCORE,ISD_RANK,IRN_SCORE,IRN_RANK,EO_SCORE,EO_RANK,SUS_SCORE,SUS_RANK
+"Indian Institute of Technology Kharagpur (IITKGP)",India,42.5,278,78.6,109,10.6,801,97,55,,,1.3,801,5.7,801,70.1,528,47.7,365,77.8,201
+"National Technical University of Athens",Greece,28.2,448,51.2,244,5.9,801,80.9,153,,,9.6,801,14.9,801,72,499,51.4,331,49.3,725
+"University of Chinese Academy of Sciences (UCAS)","China (Mainland)",30.9,396,11.9,701,100,11,75.1,179,,,3.9,801,3.1,801,93.7,108,15.6,801,,
+"Belarusian State University",Belarus,32.5,377,51.5,239,91.8,98,1.7,801,4.9,801,71.1,268,67.5,286,34.4,801,61.3,258,,
+"Anna University",India,15,701,19.4,674,9.2,801,99.8,23,,,1.6,801,6,801,47.3,801,17.8,763,64.5,409
+"Singapore University of Technology and Design",Singapore,11,701,11.3,701,99.3,41,71,208,,,,,,,35.2,801,5.3,801,25,801
+"Universität Leipzig",Germany,31.5,391,14,701,85.3,132,13,801,,,24,673,18.1,795,82.7,298,15.9,801,57.2,557
+"Jawaharlal Nehru University",India,39.8,303,17.4,701,16.7,801,37.6,497,,,1.7,801,6,801,56.9,737,20.6,716,59.3,514
+"Savitribai Phule Pune University",India,11.1,701,20.3,647,47.1,420,63.8,257,,,3.3,801,7.5,801,54.7,773,30.4,547,43,801
+"Universität Jena",Germany,23.4,540,10.4,701,100,21,12.7,801,,,34.1,548,25.5,679,91.1,154,4.9,801,53.2,641
+"Christian-Albrechts-Universität zu Kiel",Germany,24.4,522,14.6,701,56.7,325,20.9,700,,,15.1,801,11.5,801,92.4,139,24.5,648,59.2,516
+"Zhengzhou University","China (Mainland)",7.1,701,23.8,564,7,801,82.7,137,,,4.1,801,3.3,801,62.3,661,11.4,801,42.3,801
+"University of Manitoba",Canada,19.2,643,20,657,31.8,604,22.6,675,,,68.4,287,71.5,257,70,532,39.5,442,55.7,582
+"China University of Mining and Technology","China (Mainland)",4.3,701,6.4,701,25.5,727,87.2,114,,,,,,,55.5,761,16.3,801,39.2,801
+"Jadavpur University",India,23.2,544,10.5,701,13.7,801,55.8,319,,,1.1,801,5.5,801,44,801,19.5,733,61.4,470
+"Rensselaer Polytechnic Institute","United States of America",10.2,701,17.9,701,28.7,662,54.7,330,,,34.4,547,25.7,675,25.8,801,41.3,423,38.7,801
+"Nanjing University of Science and Technology","China (Mainland)",7,701,8.5,701,14.6,801,86.1,117,,,,,,,38.2,801,6.4,801,39.4,801
+"Technische Universität Braunschweig",Germany,14.4,701,21.9,604,69.9,232,9.7,801,,,50.9,405,38,515,66.1,608,19.3,738,47.4,776
+"Pakistan Institute of Engineering and Applied Sciences (PIEAS)",Pakistan,7.4,701,15.1,701,62.8,281,66,241,,,,,,,19,801,3.8,801,10.4,801
+"National Institute of Technology Tiruchirappalli",India,4.1,701,5.3,701,10.6,801,89.5,105,,,3.5,801,7.5,801,38.2,801,8.8,801,37.4,801
+"Martin-Luther-Universität Halle-Wittenberg",Germany,15.1,701,9.9,701,89.4,106,11.2,801,,,17,781,12.9,801,86.5,230,6.3,801,47.1,785
+"Bangladesh University of Engineering and Technology",Bangladesh,21.3,582,42.5,316,15.6,801,30.8,578,,,,,,,23,801,29.9,551,30,801
+"Universidad de Palermo",Argentina,15.8,701,16,701,96,68,1.1,801,42,481,94.3,136,90,148,3.6,801,10.1,801,,
+"Universidad de Antioquia",Colombia,39.7,304,24.1,557,5.9,801,7.1,801,4.9,801,,,,,55.7,753,26.7,612,45.5,801
+"Norwegian University of Life Sciences (UMB)",Norway,8.2,701,8.2,701,100,15,13.4,801,,,,,,,77.7,390,25.5,630,50.8,688
+"Northwest Agriculture and Forestry University","China (Mainland)",5.2,701,2.9,701,35,565,61.5,278,,,2,801,1.7,801,70.6,516,5.1,801,39,801
+"University of Engineering & Technology (UET) Lahore",Pakistan,11.1,701,49.1,260,20.4,801,15.1,801,,,2.3,801,6.5,801,56.5,746,54.1,310,40.7,801
+"University of Hyderabad",India,17.7,692,4.6,701,20.7,801,54.5,335,,,2.6,801,6.9,801,34,801,3.4,801,42.1,801
+"Addis Ababa University",Ethiopia,7.8,701,12.1,701,65.3,267,2.5,801,,,,,,,63.8,636,96.9,62,41.7,801
+"Belarusian National Technical University",Belarus,16.6,701,41.3,329,64.6,273,1,801,2.6,801,66.9,299,62,323,3.2,801,7.5,801,,
+"Jiangnan University","China (Mainland)",5.8,701,4.7,701,15.6,801,65,248,,,,,,,58.3,716,1.2,801,30,801
+"Universität Düsseldorf",Germany,16.2,701,11.4,701,60.4,298,11.5,801,,,30.6,584,23,720,68.5,558,4.9,801,36.9,801
+"Universität Rostock",Germany,9.6,701,5,701,92.6,90,9.5,801,,,21.2,705,16,801,77.3,398,6.6,801,39.5,801
+"Université de Franche-Comté",France,7.6,701,3.6,701,100,8,18.7,740,,,,,,,77.4,395,3.8,801,32,801
+"University of Stavanger",Norway,10.4,701,11.2,701,83.2,151,10.9,801,,,,,,,72.2,496,12.9,801,45.2,801
+"Panjab University",India,9.4,701,11.5,701,10.3,801,43.5,433,,,3.2,801,7.5,801,33,801,39.6,441,50.9,684
+"Universidad Católica Andrés Bello - UCAB","Venezuela (Bolivarian Republic of)",33.6,362,56.4,210,7.4,801,1,801,5.5,801,5.3,801,9.2,801,,,22.6,677,,
+"University of Peshawar",Pakistan,9.4,701,11.9,701,87.2,119,12.3,801,,,2,801,1.7,801,49,801,19.2,742,25.8,801
+"University of South Africa","South Africa",13.8,701,13.6,701,1.2,801,11.7,801,,,13.3,801,10.1,801,92.5,138,96,66,43.3,801
+"Ferdowsi University of Mashhad","Iran (Islamic Republic of)",11.1,701,10.9,701,5.7,801,35.1,524,,,9.5,801,12.4,801,74.5,453,12.9,801,33.3,801
+"Indian Institute of Technology Bhubaneswar (IIT BBS)",India,5,701,12.4,701,15.9,801,55.6,321,,,1.1,801,5.5,801,10.8,801,1.8,801,42.4,801
+"Nanjing Agricultural University","China (Mainland)",6.1,701,2.3,701,17.8,801,53,352,,,2.2,801,1.9,801,54.8,772,1.2,801,39.1,801
+"Nanjing Normal University","China (Mainland)",6.4,701,4.6,701,20.7,801,42.8,443,,,7.8,801,6,801,57.2,730,8.2,801,40.2,801
+"Universidad de Belgrano",Argentina,11.2,701,15.3,701,85.1,134,1,801,7.3,801,39,503,29.2,624,,,44.3,397,,
+"Universidad de Córdoba - España",Spain,15.5,701,6.5,701,32.8,591,18.1,749,,,,,,,79.5,360,5.9,801,46,801
+"Universidad Nacional Mayor de San Marcos",Peru,28.9,429,28.4,492,11,801,1.7,801,,,,,,,32.9,801,53,321,24.3,801
+"University of Cyberjaya",Malaysia,22.5,557,6.1,701,48.9,398,2.1,801,23.4,671,87.3,184,86.3,166,7.2,801,4.8,801,,
+"Wuhan University of Technology","China (Mainland)",7.2,701,4.6,701,24.1,751,41.2,457,,,4.4,801,3.5,801,64.2,632,10.1,801,34.9,801
+"Aligarh Muslim University (AMU), Aligarh",India,15.4,701,5.3,701,18.4,801,24.7,645,,,1.8,801,6.2,801,64.8,622,3.2,801,45.8,801
+"Asfendiyarov Kazakh National Medical University",Kazakhstan,7.3,701,8.8,701,67.2,255,1.3,801,15.8,783,76.8,244,70.3,267,6.4,801,7.8,801,,
+"Georgian Technical University",Georgia,7.1,701,7.1,701,1,801,54.4,336,,,,,,,7.8,801,29.3,562,3,801
+"German University of Technology in Oman  (GUTECH)",Oman,9.1,701,14.3,701,5.7,801,8.5,801,100,36,5.9,801,9.8,801,14.4,801,73.2,195,,
+"Hohai University","China (Mainland)",3.2,701,2.7,701,17.8,801,33.2,548,,,,,,,74.1,463,1.2,801,39.3,801
+"Islamic University of Lebanon",Lebanon,10.6,701,13.4,701,39.6,513,1.2,801,36.7,523,98.8,75,81.8,190,2.2,801,3.9,801,,
+"Kyrgyz Russian Slavic University",Kyrgyzstan,10.9,701,13.4,701,99.9,30,1,801,,,,,,,1.6,801,35.4,486,,
+"Rhodes University","South Africa",8,701,9.1,701,17.2,801,18.9,733,,,46.4,434,34.6,554,56.5,745,42.9,408,42.2,801
+"Sumgait State University",Azerbaijan,14.1,701,12.6,701,97.9,58,1.1,801,2.6,801,1.4,801,5.8,801,1.8,801,12,801,,
+"Universidad Argentina de la Empresa -UADE",Argentina,6.4,701,17.3,701,98.1,55,1,801,2.7,801,9.9,801,14.2,801,1.3,801,29.2,566,,
+"Universidad de San Andrés",Argentina,11.7,701,25.2,535,53,354,4.1,801,10.2,801,7.6,801,5.9,801,11.7,801,32.5,522,,
+"Universidad Nacional de Rosario",Argentina,27.4,457,14.9,701,29.9,635,1.4,801,,,10.8,801,8.3,801,27,801,15.2,801,18.8,801
+"Université de Bretagne Occidentale (UBO)",France,6.2,701,5.4,701,32.1,600,25.2,634,,,,,,,82.7,297,3.6,801,47.2,783
+"Université Sorbonne Paris Nord",France,14,701,7.9,701,6,801,37.6,496,,,,,,,57.2,729,6.9,801,33.5,801
+"University of Alabama, Birmingham","United States of America",7.3,701,4.6,701,62.6,283,24.1,653,,,,,,,57.2,732,5,801,35.6,801
+"University of Ibadan",Nigeria,11.6,701,16.6,701,6.4,801,7.3,801,,,,,,,64.8,624,76.2,175,41.9,801
+"University of Isfahan","Iran (Islamic Republic of)",7.7,701,10.7,701,4.9,801,30.7,579,,,2.5,801,2.1,801,52.8,798,4.7,801,27.7,801
+"University of Lagos",Nigeria,9.4,701,16.5,701,2.5,801,5.2,801,,,,,,,45.9,801,90.4,103,36.6,801
+"University of Murcia",Spain,15.3,701,5.4,701,24.9,735,14.9,801,,,7,801,12.2,801,77.9,385,4.9,801,64.4,413
+"University of Nairobi",Kenya,12.8,701,13.7,701,25.7,723,2.6,801,,,,,,,48.7,801,95.6,72,39.1,801
+"University of the Free State","South Africa",7.2,701,12.1,701,4.9,801,13.8,801,,,8.3,801,6.4,801,93.7,107,18.4,751,41.7,801
+"Van Lang University","Viet Nam",31.4,392,10.3,701,28.9,650,2.3,801,10.6,801,1.3,801,5.7,801,45.3,801,4.9,801,,
+"ADA University",Azerbaijan,8.4,701,22.4,595,62.3,286,1.3,801,20.2,710,7.7,801,11.9,801,5.2,801,12,801,,
+"Bahauddin Zakariya University",Pakistan,8.5,701,7.8,701,4.1,801,30.3,584,,,1,801,1,801,50.8,801,8.3,801,25.7,801
+"Beijing University of Chinese Medicine","China (Mainland)",5.7,701,6.4,701,44.2,448,14.7,801,,,13.3,801,10.1,801,7.6,801,4.1,801,8.4,801
+"California Polytechnic State University","United States of America",5.6,701,20,655,9.4,801,4.9,801,,,,,,,43.6,801,19.4,736,32.8,801
+"Galgotias University",India,16.6,701,4.6,701,36.2,553,3.2,801,21.1,696,15,801,18.1,793,16.9,801,3.3,801,,
+"Islamic Azad University","Iran (Islamic Republic of)",6.1,701,5,701,1.7,801,8.5,801,,,1.1,801,1.1,801,96.3,55,35.7,482,29.4,801
+"Jahangirnagar University",Bangladesh,12.2,701,17.5,701,5.7,801,9.3,801,,,,,,,35.3,801,4.5,801,33.2,801
+"Kazakh Ablai khan University of International Relations and World Languages",Kazakhstan,10.4,701,16.7,701,54.1,348,1,801,9.9,801,8.7,801,11.8,801,1.3,801,4.2,801,,
+"Kwame Nkrumah University of Science and Technology",Ghana,10.2,701,9.2,701,6,801,3.9,801,,,,,,,65.9,611,49.9,344,42.3,801
+"Kyrgyz National University",Kyrgyzstan,14.3,701,12.6,701,28.4,671,1.1,801,2.6,801,14,801,16.2,801,4.5,801,51.7,327,,
+"Osmania University, Hyderabad",India,6,701,6.2,701,5,801,35.1,523,,,9.3,801,7.1,801,25.2,801,16.3,801,20.5,801
+"Technische Universität Kaiserslautern",Germany,8.6,701,6,701,22.2,787,7.5,801,,,,,,,63.4,645,5.4,801,,
+"The ""Gheorghe Asachi"" Technical University of Iasi",Romania,6.5,701,14.5,701,3.8,801,10,801,,,8.6,801,6.6,801,49.3,801,5.3,801,22.7,801
+"Universidad Nacional de San Luis",Argentina,3.9,701,2,701,84.8,136,1.4,801,,,,,,,10.1,801,1.5,801,18,801
+"Universidad Nacional del Centro de la Provincia de Buenos Aires",Argentina,6.3,701,6.3,701,81.4,160,1.8,801,,,,,,,7.7,801,1.5,801,20.5,801
+"Universidad Tecnológica Nacional (UTN)",Argentina,5.2,701,19.2,678,56.6,327,1.2,801,,,3.8,801,3.1,801,10.9,801,9.2,801,19.1,801
+"Université de Limoges",France,8.9,701,5.5,701,22.4,783,9.1,801,,,,,,,55.9,750,3.6,801,29.6,801
+"Université de Poitiers",France,11.1,701,1.2,701,7.6,801,8.5,801,,,38.9,505,29.1,626,74.6,448,13.6,801,39.3,801
+"University of Basrah",Iraq,9.1,701,26.6,514,18.7,801,2.2,801,,,1,801,1,801,34.7,801,14.2,801,20,801
+"University of Khartoum",Sudan,8.9,701,6.9,701,8.2,801,5.1,801,,,2.1,801,1.8,801,53.5,788,84.9,137,23.3,801
+"University of Kufa",Iraq,7.4,701,33.3,433,31.7,607,2.1,801,,,1,801,1,801,26.3,801,5.7,801,15.6,801
+"University of Novi Sad",Serbia,12.5,701,6.5,701,10.5,801,6.9,801,,,,,,,82.1,312,30.7,538,31.2,801
+"University of Peradeniya","Sri Lanka",10.4,701,13.6,701,14.3,801,3.7,801,,,1.6,801,6,801,39.5,801,17.7,765,50.6,693
+"University of Sarajevo","Bosnia and Herzegovina",5,701,1,701,6.5,801,2.9,801,,,5.2,801,4.1,801,41.3,801,89.1,113,20.5,801
+"University of South Alabama (USA)","United States of America",5.6,701,11.1,701,23.1,772,13.1,801,,,2.7,801,2.3,801,13.7,801,3.2,801,28.9,801
+"Belarusian State University of Informatics and Radioelectronics",Belarus,6.7,701,23.4,573,26.1,716,1.4,801,2.6,801,17.6,772,20.4,754,7.2,801,7.5,801,,
+"Chittagong University of Engineering and Technology",Bangladesh,10,701,16.2,701,10,801,12.1,801,1.6,801,,,,,8.1,801,4.8,801,20.3,801
+"Indian Institute of Information Technology - Allahabad",India,4.2,701,12.7,701,3.2,801,27.5,613,,,4,801,7.9,801,8.4,801,1.9,801,6.6,801
+"Jadara University",Jordan,9.9,701,4.2,701,29.4,644,3.3,801,4.5,801,49.7,410,37.1,525,4.2,801,5.9,801,,
+"Jamia Hamdard, New Delhi",India,6.3,701,2.8,701,13.5,801,25.5,629,,,3.8,801,7.8,801,13.7,801,1.8,801,14.4,801
+"Khulna University",Bangladesh,8.6,701,7.9,701,14.3,801,8.6,801,,,,,,,20.8,801,4.3,801,25.4,801
+"Khulna University of Engineering and Technology",Bangladesh,7.3,701,16.7,701,10.5,801,13.4,801,1.4,801,,,,,12.6,801,4.5,801,22,801
+"Rajshahi University of Engineering and Technology",Bangladesh,6.9,701,13.3,701,9.9,801,16,782,,,,,,,9.8,801,4.1,801,18,801
+"The Islamia University of Bahawalpur,Pakistan",Pakistan,6.2,701,7,701,4.7,801,9.1,801,,,,,,,55.8,751,3.1,801,36.2,801
+"Universidad de Tarapaca",Chile,4.1,701,2.1,701,4.4,801,20.4,706,17.7,755,,,,,49.6,801,2.5,801,21,801
+"Universidad Latinoamericana de Ciencia y Tecnología Costa Rica (ULACIT)","Costa Rica",7.8,701,17.2,701,32.6,592,1.1,801,13.8,801,12.8,801,9.8,801,1.1,801,12.3,801,,
+"Universidad Metropolitana","Venezuela (Bolivarian Republic of)",9.8,701,24.4,550,6.4,801,1.1,801,3.9,801,3.3,801,7.4,801,2.3,801,28.1,590,,
+"Universidad Nacional del Sur",Argentina,8.1,701,4.6,701,23.1,775,2.4,801,,,,,,,30,801,4.7,801,29,801
+"Universidade Federal do Rio Grande Do Norte",Brazil,6.7,701,1.6,701,10.8,801,7,801,,,1.3,801,5.8,801,50.1,801,1.4,801,31.3,801
+"University of Moratuwa","Sri Lanka",6,701,8,701,5.3,801,15.6,791,,,1,801,1,801,13.2,801,13.1,801,24.9,801
+"University of Sri Jayewardenepura","Sri Lanka",8,701,12.2,701,5.7,801,7,801,,,1.3,801,5.7,801,27.8,801,22.8,674,27.4,801
+"University of West Bohemia",Czechia,7.2,701,5.3,701,12.5,801,7.9,801,,,6.2,801,4.8,801,40.9,801,15.5,801,19.5,801

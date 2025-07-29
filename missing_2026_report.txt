@@ -1,0 +1,114 @@
+高校: Indian Institute of Technology Kharagpur (IITKGP) 缺失: IFR_SCORE, IFR_RANK
+高校: National Technical University of Athens 缺失: IFR_SCORE, IFR_RANK
+高校: University of Chinese Academy of Sciences (UCAS) 缺失: IFR_SCORE, IFR_RANK, SUS_SCORE, SUS_RANK
+高校: Belarusian State University 缺失: SUS_SCORE, SUS_RANK
+高校: Anna University 缺失: IFR_SCORE, IFR_RANK
+高校: Singapore University of Technology and Design 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universität Leipzig 缺失: IFR_SCORE, IFR_RANK
+高校: Jawaharlal Nehru University 缺失: IFR_SCORE, IFR_RANK
+高校: Savitribai Phule Pune University 缺失: IFR_SCORE, IFR_RANK
+高校: Universität Jena 缺失: IFR_SCORE, IFR_RANK
+高校: Christian-Albrechts-Universität zu Kiel 缺失: IFR_SCORE, IFR_RANK
+高校: Zhengzhou University 缺失: IFR_SCORE, IFR_RANK
+高校: University of Manitoba 缺失: IFR_SCORE, IFR_RANK
+高校: China University of Mining and Technology 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Jadavpur University 缺失: IFR_SCORE, IFR_RANK
+高校: Rensselaer Polytechnic Institute 缺失: IFR_SCORE, IFR_RANK
+高校: Nanjing University of Science and Technology 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Technische Universität Braunschweig 缺失: IFR_SCORE, IFR_RANK
+高校: Pakistan Institute of Engineering and Applied Sciences (PIEAS) 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: National Institute of Technology Tiruchirappalli 缺失: IFR_SCORE, IFR_RANK
+高校: Martin-Luther-Universität Halle-Wittenberg 缺失: IFR_SCORE, IFR_RANK
+高校: Bangladesh University of Engineering and Technology 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad de Palermo 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad de Antioquia 缺失: ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Norwegian University of Life Sciences (UMB) 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Northwest Agriculture and Forestry University 缺失: IFR_SCORE, IFR_RANK
+高校: University of Engineering & Technology (UET) Lahore 缺失: IFR_SCORE, IFR_RANK
+高校: University of Hyderabad 缺失: IFR_SCORE, IFR_RANK
+高校: Addis Ababa University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Belarusian National Technical University 缺失: SUS_SCORE, SUS_RANK
+高校: Jiangnan University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universität Düsseldorf 缺失: IFR_SCORE, IFR_RANK
+高校: Universität Rostock 缺失: IFR_SCORE, IFR_RANK
+高校: Université de Franche-Comté 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Stavanger 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Panjab University 缺失: IFR_SCORE, IFR_RANK
+高校: Universidad Católica Andrés Bello - UCAB 缺失: IRN_SCORE, IRN_RANK, SUS_SCORE, SUS_RANK
+高校: University of Peshawar 缺失: IFR_SCORE, IFR_RANK
+高校: University of South Africa 缺失: IFR_SCORE, IFR_RANK
+高校: Ferdowsi University of Mashhad 缺失: IFR_SCORE, IFR_RANK
+高校: Indian Institute of Technology Bhubaneswar (IIT BBS) 缺失: IFR_SCORE, IFR_RANK
+高校: Nanjing Agricultural University 缺失: IFR_SCORE, IFR_RANK
+高校: Nanjing Normal University 缺失: IFR_SCORE, IFR_RANK
+高校: Universidad de Belgrano 缺失: IRN_SCORE, IRN_RANK, SUS_SCORE, SUS_RANK
+高校: Universidad de Córdoba - España 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad Nacional Mayor de San Marcos 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Cyberjaya 缺失: SUS_SCORE, SUS_RANK
+高校: Wuhan University of Technology 缺失: IFR_SCORE, IFR_RANK
+高校: Aligarh Muslim University (AMU), Aligarh 缺失: IFR_SCORE, IFR_RANK
+高校: Asfendiyarov Kazakh National Medical University 缺失: SUS_SCORE, SUS_RANK
+高校: Georgian Technical University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: German University of Technology in Oman  (GUTECH) 缺失: SUS_SCORE, SUS_RANK
+高校: Hohai University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Islamic University of Lebanon 缺失: SUS_SCORE, SUS_RANK
+高校: Kyrgyz Russian Slavic University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK, SUS_SCORE, SUS_RANK
+高校: Rhodes University 缺失: IFR_SCORE, IFR_RANK
+高校: Sumgait State University 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad Argentina de la Empresa -UADE 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad de San Andrés 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad Nacional de Rosario 缺失: IFR_SCORE, IFR_RANK
+高校: Université de Bretagne Occidentale (UBO) 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Université Sorbonne Paris Nord 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Alabama, Birmingham 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Ibadan 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Isfahan 缺失: IFR_SCORE, IFR_RANK
+高校: University of Lagos 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Murcia 缺失: IFR_SCORE, IFR_RANK
+高校: University of Nairobi 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of the Free State 缺失: IFR_SCORE, IFR_RANK
+高校: Van Lang University 缺失: SUS_SCORE, SUS_RANK
+高校: ADA University 缺失: SUS_SCORE, SUS_RANK
+高校: Bahauddin Zakariya University 缺失: IFR_SCORE, IFR_RANK
+高校: Beijing University of Chinese Medicine 缺失: IFR_SCORE, IFR_RANK
+高校: California Polytechnic State University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Galgotias University 缺失: SUS_SCORE, SUS_RANK
+高校: Islamic Azad University 缺失: IFR_SCORE, IFR_RANK
+高校: Jahangirnagar University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Kazakh Ablai khan University of International Relations and World Languages 缺失: SUS_SCORE, SUS_RANK
+高校: Kwame Nkrumah University of Science and Technology 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Kyrgyz National University 缺失: SUS_SCORE, SUS_RANK
+高校: Osmania University, Hyderabad 缺失: IFR_SCORE, IFR_RANK
+高校: Technische Universität Kaiserslautern 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK, SUS_SCORE, SUS_RANK
+高校: The "Gheorghe Asachi" Technical University of Iasi 缺失: IFR_SCORE, IFR_RANK
+高校: Universidad Nacional de San Luis 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad Nacional del Centro de la Provincia de Buenos Aires 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad Tecnológica Nacional (UTN) 缺失: IFR_SCORE, IFR_RANK
+高校: Université de Limoges 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Université de Poitiers 缺失: IFR_SCORE, IFR_RANK
+高校: University of Basrah 缺失: IFR_SCORE, IFR_RANK
+高校: University of Khartoum 缺失: IFR_SCORE, IFR_RANK
+高校: University of Kufa 缺失: IFR_SCORE, IFR_RANK
+高校: University of Novi Sad 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: University of Peradeniya 缺失: IFR_SCORE, IFR_RANK
+高校: University of Sarajevo 缺失: IFR_SCORE, IFR_RANK
+高校: University of South Alabama (USA) 缺失: IFR_SCORE, IFR_RANK
+高校: Belarusian State University of Informatics and Radioelectronics 缺失: SUS_SCORE, SUS_RANK
+高校: Chittagong University of Engineering and Technology 缺失: ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Indian Institute of Information Technology - Allahabad 缺失: IFR_SCORE, IFR_RANK
+高校: Jadara University 缺失: SUS_SCORE, SUS_RANK
+高校: Jamia Hamdard, New Delhi 缺失: IFR_SCORE, IFR_RANK
+高校: Khulna University 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Khulna University of Engineering and Technology 缺失: ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Rajshahi University of Engineering and Technology 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: The Islamia University of Bahawalpur,Pakistan 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad de Tarapaca 缺失: ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidad Latinoamericana de Ciencia y Tecnología Costa Rica (ULACIT) 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad Metropolitana 缺失: SUS_SCORE, SUS_RANK
+高校: Universidad Nacional del Sur 缺失: IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK
+高校: Universidade Federal do Rio Grande Do Norte 缺失: IFR_SCORE, IFR_RANK
+高校: University of Moratuwa 缺失: IFR_SCORE, IFR_RANK
+高校: University of Sri Jayewardenepura 缺失: IFR_SCORE, IFR_RANK
+高校: University of West Bohemia 缺失: IFR_SCORE, IFR_RANK
+高校: None 缺失: RANK, TOTAL_SCORE, AR_SCORE, AR_RANK, ER_SCORE, ER_RANK, FSR_SCORE, FSR_RANK, CPF_SCORE, CPF_RANK, IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK, IRN_SCORE, IRN_RANK, EO_SCORE, EO_RANK, SUS_SCORE, SUS_RANK
+高校: None 缺失: RANK, TOTAL_SCORE, AR_SCORE, AR_RANK, ER_SCORE, ER_RANK, FSR_SCORE, FSR_RANK, CPF_SCORE, CPF_RANK, IFR_SCORE, IFR_RANK, ISR_SCORE, ISR_RANK, ISD_SCORE, ISD_RANK, IRN_SCORE, IRN_RANK, EO_SCORE, EO_RANK, SUS_SCORE, SUS_RANK
