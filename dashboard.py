@@ -145,35 +145,35 @@ if mode == "Filter Mode":
     )
 
     # Select columns based on display mode
-main_cols = ["RANK", "NAME", "COUNTRY", "YEAR", "TOTAL_SCORE"]
-for ind, score_col, rank_col in INDICATORS:
-    if ind in selected_indicators:
-        if display_mode == "Score":
-            main_cols += [score_col]
-        elif display_mode == "Rank":
-            main_cols += [rank_col]
-        else:  # Both
-            main_cols += [score_col, rank_col]
+    main_cols = ["RANK", "NAME", "COUNTRY", "YEAR", "TOTAL_SCORE"]
+    for ind, score_col, rank_col in INDICATORS:
+        if ind in selected_indicators:
+            if display_mode == "Score":
+                main_cols += [score_col]
+            elif display_mode == "Rank":
+                main_cols += [rank_col]
+            else:  # Both
+                main_cols += [score_col, rank_col]
 
     # Sort: by RANK ascending
-show_df = filtered[main_cols].copy()
+    show_df = filtered[main_cols].copy()
     # RANK might be string, need to convert to numeric for sorting
-show_df["RANK_SORT"] = pd.to_numeric(show_df["RANK"], errors="coerce")
-show_df = show_df.sort_values(["YEAR", "RANK_SORT"]).drop(columns=["RANK_SORT"])
+    show_df["RANK_SORT"] = pd.to_numeric(show_df["RANK"], errors="coerce")
+    show_df = show_df.sort_values(["YEAR", "RANK_SORT"]).drop(columns=["RANK_SORT"])
 
     # Column header beautification
-col_rename = {
-    "RANK": "Rank", "NAME": "Name", "COUNTRY": "Country", "YEAR": "Year", "TOTAL_SCORE": "Total Score"
-}
-for ind, score_col, rank_col in INDICATORS:
-    if ind in selected_indicators:
-        if display_mode == "Score":
-            col_rename[score_col] = f"{ind} Score"
-        elif display_mode == "Rank":
-            col_rename[rank_col] = f"{ind} Rank"
-        else:  # Both
-            col_rename[score_col] = f"{ind} Score"
-            col_rename[rank_col] = f"{ind} Rank"
+    col_rename = {
+        "RANK": "Rank", "NAME": "Name", "COUNTRY": "Country", "YEAR": "Year", "TOTAL_SCORE": "Total Score"
+    }
+    for ind, score_col, rank_col in INDICATORS:
+        if ind in selected_indicators:
+            if display_mode == "Score":
+                col_rename[score_col] = f"{ind} Score"
+            elif display_mode == "Rank":
+                col_rename[rank_col] = f"{ind} Rank"
+            else:  # Both
+                col_rename[score_col] = f"{ind} Score"
+                col_rename[rank_col] = f"{ind} Rank"
 
     show_df = show_df.rename(columns=col_rename)
     show_df = show_df.replace({None: "None", "": "None"})
