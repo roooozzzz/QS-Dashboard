@@ -14,6 +14,9 @@ st.set_page_config(
 # Title
 st.title("🎓 QS World University Rankings Dashboard")
 
+# Add some space between title and mode selector
+st.markdown("<br>", unsafe_allow_html=True)
+
 # Data loading
 @st.cache_data
 def load_data():
@@ -187,18 +190,36 @@ elif mode == "Search Mode":
     search_input = st.text_input(
         "Search University (English name)",
         value=st.session_state['search_name'],
-        placeholder="Enter university English name and press Enter",
+        placeholder="Enter 2-3 letters to see suggestions",
         help="Type part of a university name to see suggestions."
     )
     
-    # Auto-complete suggestions
-    if search_input.strip():
-        suggestions = [n for n in univ_names if search_input.lower() in n.lower()][:5]
+    # Enhanced auto-complete suggestions with fuzzy search
+    if len(search_input.strip()) >= 2:
+        # Get suggestions based on partial match
+        suggestions = []
+        search_lower = search_input.lower()
+        
+        for name in univ_names:
+            name_lower = name.lower()
+            # Check if search term appears anywhere in the name
+            if search_lower in name_lower:
+                suggestions.append(name)
+        
+        # Sort by relevance (exact matches first, then partial matches)
+        suggestions.sort(key=lambda x: (x.lower().startswith(search_lower), x.lower().find(search_lower)))
+        suggestions = suggestions[:5]
+        
         if suggestions:
             st.markdown(
-                '<div style="color: #888; font-size: 0.95em;">Suggestions: ' + ', '.join(suggestions) + '</div>',
+                '<div style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><strong>Suggestions:</strong></div>',
                 unsafe_allow_html=True
             )
+            for i, suggestion in enumerate(suggestions, 1):
+                st.markdown(
+                    f'<div style="color: #888; font-size: 0.85em; margin-left: 10px;">{i}. {suggestion}</div>',
+                    unsafe_allow_html=True
+                )
     
     # Search function: university yearly comparison
     if search_input.strip():
@@ -249,6 +270,97 @@ elif mode == "Search Mode":
             display_df.index = display_df.index + 1
             
             st.dataframe(display_df, use_container_width=True)
+            
+            # Charts section
+            st.markdown("---")
+            st.subheader("📊 University Performance Charts")
+            
+            # Chart 1: Ranking Trend
+            st.markdown("#### 📈 Ranking Trend Over Years")
+            
+            # Prepare ranking data for chart
+            ranking_data = school_data[['YEAR', 'RANK']].copy()
+            ranking_data['RANK_NUMERIC'] = pd.to_numeric(ranking_data['RANK'], errors='coerce')
+            
+            # Create ranking trend chart
+            fig_rank = go.Figure()
+            fig_rank.add_trace(go.Scatter(
+                x=ranking_data['YEAR'],
+                y=ranking_data['RANK_NUMERIC'],
+                mode='lines+markers',
+                name='Rank',
+                line=dict(color='#1f77b4', width=3),
+                marker=dict(size=8)
+            ))
+            
+            fig_rank.update_layout(
+                title=f"{search_df.iloc[0]['NAME']} - Ranking Trend",
+                xaxis_title="Year",
+                yaxis_title="Rank",
+                height=400,
+                showlegend=True
+            )
+            
+            # Invert Y-axis so lower rank (better) appears higher
+            fig_rank.update_yaxes(autorange="reversed")
+            
+            st.plotly_chart(fig_rank, use_container_width=True)
+            
+            # Chart 2: Indicator Scores Trend
+            st.markdown("#### 📊 Indicator Scores Over Years")
+            
+            # Indicator selection for the chart
+            indicator_options = [ind[0] for ind in INDICATORS]  # Get indicator names
+            selected_indicators = st.multiselect(
+                "Select Indicators to Display:",
+                options=indicator_options,
+                default=indicator_options,  # Show all by default
+                key='selected_indicators_chart'
+            )
+            
+            if selected_indicators:
+                # Prepare indicator scores data
+                indicator_data = school_data[['YEAR']].copy()
+                
+                # Add each indicator score
+                colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
+                         '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+                
+                fig_scores = go.Figure()
+                
+                for idx, (indicator_name, score_col, rank_col) in enumerate(INDICATORS):
+                    # Only add traces for selected indicators
+                    if indicator_name in selected_indicators:
+                        # Get scores for this indicator
+                        scores = pd.to_numeric(school_data[score_col], errors='coerce')
+                        
+                        fig_scores.add_trace(go.Scatter(
+                            x=school_data['YEAR'],
+                            y=scores,
+                            mode='lines+markers',
+                            name=indicator_name,
+                            line=dict(color=colors[idx % len(colors)], width=2),
+                            marker=dict(size=6)
+                        ))
+                
+                fig_scores.update_layout(
+                    title=f"{search_df.iloc[0]['NAME']} - Indicator Scores Trend",
+                    xaxis_title="Year",
+                    yaxis_title="Score",
+                    height=500,
+                    showlegend=True,
+                    legend=dict(
+                        orientation="h",
+                        yanchor="bottom",
+                        y=1.02,
+                        xanchor="right",
+                        x=1
+                    )
+                )
+                
+                st.plotly_chart(fig_scores, use_container_width=True)
+            else:
+                st.info("Please select at least one indicator to display the chart.")
         else:
             st.warning("❌ No matching universities found")
 
@@ -265,14 +377,35 @@ elif mode == "Compare Mode":
     col1, col2 = st.columns(2)
     with col1:
         school1 = st.text_input("University 1", value=st.session_state['compare_schools'][0], 
-                               placeholder="Enter university English name and press Enter", key='school1')
+                               placeholder="Enter 2-3 letters to see suggestions", key='school1')
         school3 = st.text_input("University 3", value=st.session_state['compare_schools'][2], 
-                               placeholder="Enter university English name and press Enter", key='school3')
+                               placeholder="Enter 2-3 letters to see suggestions", key='school3')
     with col2:
         school2 = st.text_input("University 2", value=st.session_state['compare_schools'][1], 
-                               placeholder="Enter university English name and press Enter", key='school2')
+                               placeholder="Enter 2-3 letters to see suggestions", key='school2')
         school4 = st.text_input("University 4", value=st.session_state['compare_schools'][3], 
-                               placeholder="Enter university English name and press Enter", key='school4')
+                               placeholder="Enter 2-3 letters to see suggestions", key='school4')
+    
+    # Show suggestions for each input box
+    def show_suggestions(input_text, box_name):
+        if len(input_text.strip()) >= 2:
+            suggestions = []
+            search_lower = input_text.lower()
+            for name in univ_names:
+                name_lower = name.lower()
+                if search_lower in name_lower:
+                    suggestions.append(name)
+            suggestions.sort(key=lambda x: (x.lower().startswith(search_lower), x.lower().find(search_lower)))
+            suggestions = suggestions[:3]
+            if suggestions:
+                st.markdown(f'<div style="color: #666; font-size: 0.8em; margin-left: 10px; margin-bottom: 5px;"><strong>{box_name} suggestions:</strong></div>', unsafe_allow_html=True)
+                for i, suggestion in enumerate(suggestions, 1):
+                    st.markdown(f'<div style="color: #888; font-size: 0.75em; margin-left: 20px;">{i}. {suggestion}</div>', unsafe_allow_html=True)
+    
+    show_suggestions(school1, "University 1")
+    show_suggestions(school2, "University 2")
+    show_suggestions(school3, "University 3")
+    show_suggestions(school4, "University 4")
     
     # Update session state
     st.session_state['compare_schools'] = [school1, school2, school3, school4]
@@ -534,4 +667,21 @@ elif mode == "Compare Mode":
                     show_comparison.to_excel(writer, sheet_name='Comparison', index=False)
                 st.success(f"✅ Data downloaded to {output}")
         else:
-            st.warning("❌ No matching universities found") 
+            st.warning("❌ No matching universities found")
+
+# Footer section
+st.markdown("---")
+st.markdown(
+    """
+    <div style="text-align: center; padding: 20px 0; color: #666; font-size: 14px;">
+        <div style="margin-bottom: 10px;">
+            <a href="https://www.mshare.cn" target="_blank" style="color: #666; text-decoration: none; margin: 0 15px;">About us</a>
+            <a href="https://www.shixiseng.com" target="_blank" style="color: #666; text-decoration: none; margin: 0 15px;">Product</a>
+        </div>
+        <div style="margin-top: 10px; color: #999; font-size: 12px;">
+            ©QS World University Rankings Dashboard by mShare
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+) 
