@@ -114,9 +114,9 @@ if mode == "Filter Mode":
     # Filter bar (displayed in main interface)
     st.subheader("Filter Criteria")
     col1, col2, col3, col4 = st.columns(4)
-    with col1:
+with col1:
         selected_year = st.selectbox("Year", years, index=len(years)-1, key='selected_year')
-    with col2:
+with col2:
         selected_regions = st.multiselect("Region", regions, default=_default_regions, key='selected_regions')
     with col3:
         selected_countries = st.multiselect("Country", countries, default=_default_countries, key='selected_countries')
@@ -124,60 +124,60 @@ if mode == "Filter Mode":
         selected_indicators = st.multiselect("Indicators", indicator_options, default=_default_indicators, key='selected_indicators')
 
     # Filter data
-    filtered = df[(df['YEAR'] == selected_year) & df['REGION'].isin(selected_regions)]
-    if selected_countries:
-        filtered = filtered[filtered['COUNTRY'].isin(selected_countries)]
+filtered = df[(df['YEAR'] == selected_year) & df['REGION'].isin(selected_regions)]
+if selected_countries:
+    filtered = filtered[filtered['COUNTRY'].isin(selected_countries)]
 
     # Statistics
-    school_count = get_school_count(filtered)
-    avg_score = get_avg_score(filtered)
-    st.markdown(f"**Total Universities: {school_count}** | **Average Total Score: {avg_score if avg_score is not None else 'None'}**")
+school_count = get_school_count(filtered)
+avg_score = get_avg_score(filtered)
+st.markdown(f"**Total Universities: {school_count}** | **Average Total Score: {avg_score if avg_score is not None else 'None'}**")
 
     # Filter function: main table
-    st.subheader("Filtered Results")
+st.subheader("Filtered Results")
 
     # Display mode selector
-    display_mode = st.radio(
-        "Display Mode:",
-        ["Score", "Rank", "Both"],
-        horizontal=True,
+display_mode = st.radio(
+    "Display Mode:",
+    ["Score", "Rank", "Both"],
+    horizontal=True,
         index=0  # Default to Score
-    )
+)
 
     # Select columns based on display mode
-    main_cols = ["RANK", "NAME", "COUNTRY", "YEAR", "TOTAL_SCORE"]
-    for ind, score_col, rank_col in INDICATORS:
-        if ind in selected_indicators:
-            if display_mode == "Score":
-                main_cols += [score_col]
-            elif display_mode == "Rank":
-                main_cols += [rank_col]
-            else:  # Both
-                main_cols += [score_col, rank_col]
+main_cols = ["RANK", "NAME", "COUNTRY", "YEAR", "TOTAL_SCORE"]
+for ind, score_col, rank_col in INDICATORS:
+    if ind in selected_indicators:
+        if display_mode == "Score":
+            main_cols += [score_col]
+        elif display_mode == "Rank":
+            main_cols += [rank_col]
+        else:  # Both
+            main_cols += [score_col, rank_col]
 
     # Sort: by RANK ascending
-    show_df = filtered[main_cols].copy()
+show_df = filtered[main_cols].copy()
     # RANK might be string, need to convert to numeric for sorting
-    show_df["RANK_SORT"] = pd.to_numeric(show_df["RANK"], errors="coerce")
-    show_df = show_df.sort_values(["YEAR", "RANK_SORT"]).drop(columns=["RANK_SORT"])
+show_df["RANK_SORT"] = pd.to_numeric(show_df["RANK"], errors="coerce")
+show_df = show_df.sort_values(["YEAR", "RANK_SORT"]).drop(columns=["RANK_SORT"])
 
     # Column header beautification
-    col_rename = {
-        "RANK": "Rank", "NAME": "Name", "COUNTRY": "Country", "YEAR": "Year", "TOTAL_SCORE": "Total Score"
-    }
-    for ind, score_col, rank_col in INDICATORS:
-        if ind in selected_indicators:
-            if display_mode == "Score":
-                col_rename[score_col] = f"{ind} Score"
-            elif display_mode == "Rank":
-                col_rename[rank_col] = f"{ind} Rank"
-            else:  # Both
-                col_rename[score_col] = f"{ind} Score"
-                col_rename[rank_col] = f"{ind} Rank"
+col_rename = {
+    "RANK": "Rank", "NAME": "Name", "COUNTRY": "Country", "YEAR": "Year", "TOTAL_SCORE": "Total Score"
+}
+for ind, score_col, rank_col in INDICATORS:
+    if ind in selected_indicators:
+        if display_mode == "Score":
+            col_rename[score_col] = f"{ind} Score"
+        elif display_mode == "Rank":
+            col_rename[rank_col] = f"{ind} Rank"
+        else:  # Both
+            col_rename[score_col] = f"{ind} Score"
+            col_rename[rank_col] = f"{ind} Rank"
 
-    show_df = show_df.rename(columns=col_rename)
-    show_df = show_df.replace({None: "None", "": "None"})
-    show_df = show_df.reset_index(drop=True)
+show_df = show_df.rename(columns=col_rename)
+show_df = show_df.replace({None: "None", "": "None"})
+show_df = show_df.reset_index(drop=True)
     show_df.index = show_df.index + 1  # Index starts from 1
 
     # Display table
@@ -679,7 +679,7 @@ st.markdown(
             <a href="https://www.shixiseng.com" target="_blank" style="color: #666; text-decoration: none; margin: 0 15px;">Product</a>
         </div>
         <div style="margin-top: 10px; color: #999; font-size: 12px;">
-            ©QS World University Rankings Dashboard by mShare
+            Designed and coded by Rocky, powered by vibe coding. © QS World University Rankings Dashboard by mShare.
         </div>
     </div>
     """,
