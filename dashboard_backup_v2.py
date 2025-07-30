@@ -244,7 +244,7 @@ elif mode == "Search Mode":
                     col_rename[rank_col] = f"{ind} Rank"
             
             display_df = display_df.rename(columns=col_rename)
-            display_df = display_df.replace({None: "None", "": "None", "-": "N/A"})
+            display_df = display_df.replace({None: "None", "": "None"})
             display_df = display_df.reset_index(drop=True)
             display_df.index = display_df.index + 1
             
@@ -277,33 +277,6 @@ elif mode == "Compare Mode":
     # Update session state
     st.session_state['compare_schools'] = [school1, school2, school3, school4]
     
-    # Group comparison options
-    st.markdown("### Group Comparison Options")
-    st.markdown("Select groups to compare with University 1:")
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        # Higher ranked universities - Average
-        higher_avg_enabled = st.checkbox("Higher Ranked Universities - Average", key='higher_avg_enabled')
-        if higher_avg_enabled:
-            higher_avg_rank = st.selectbox("Rank difference for average", [10, 20, 30, 50], key='higher_avg_rank')
-        
-        # Higher ranked universities - Maximum
-        higher_max_enabled = st.checkbox("Higher Ranked Universities - Maximum", key='higher_max_enabled')
-        if higher_max_enabled:
-            higher_max_rank = st.selectbox("Rank difference for maximum", [10, 20, 30, 50], key='higher_max_rank')
-    
-    with col2:
-        # Same country universities - Average
-        country_avg_enabled = st.checkbox("Same Country Universities - Average", key='country_avg_enabled')
-        if country_avg_enabled:
-            country_avg_rank = st.selectbox("Rank difference for country average", [10, 30, 50, 100], key='country_avg_rank')
-        
-        # Same country universities - Maximum
-        country_max_enabled = st.checkbox("Same Country Universities - Maximum", key='country_max_enabled')
-        if country_max_enabled:
-            country_max_rank = st.selectbox("Rank difference for country maximum", [10, 30, 50, 100], key='country_max_rank')
-    
     # Comparison analysis
     schools_to_compare = [s for s in [school1, school2, school3, school4] if s.strip()]
     
@@ -319,124 +292,9 @@ elif mode == "Compare Mode":
                 all_school_data.append(school_data.iloc[0])
                 found_schools.append(school_data.iloc[0]['NAME'])
         
-        # Get University 1 data for group comparisons
-        university1_data = None
-        if school1.strip():
-            university1_data = df[(df['YEAR'] == compare_year) & 
-                                (df['NAME'].str.contains(school1, case=False, na=False))]
-            if not university1_data.empty:
-                university1_data = university1_data.iloc[0]
-        
-        # Calculate group data if University 1 is selected and groups are enabled
-        group_data = []
-        
-        if university1_data is not None:
-            # Handle rank conversion - extract first number if it's a range
-            rank_str = str(university1_data['RANK'])
-            if '-' in rank_str:
-                target_rank = int(rank_str.split('-')[0])
-            else:
-                target_rank = int(rank_str)
-            target_country = university1_data['COUNTRY']
-            
-            # Higher ranked universities - Average
-            if higher_avg_enabled:
-                start_rank = max(1, target_rank - higher_avg_rank)
-                end_rank = target_rank - 1
-                higher_avg_schools = df[(df['YEAR'] == compare_year) & 
-                                      (pd.to_numeric(df['RANK'], errors='coerce') >= start_rank) & 
-                                      (pd.to_numeric(df['RANK'], errors='coerce') <= end_rank)]
-                
-                if not higher_avg_schools.empty:
-                    avg_scores = {}
-                    for ind, score_col, _ in INDICATORS:
-                        scores = pd.to_numeric(higher_avg_schools[score_col], errors='coerce').dropna()
-                        avg_score = scores.mean() if len(scores) > 0 else 0
-                        avg_scores[score_col] = round(avg_score, 2)
-                    
-                    group_data.append({
-                        'NAME': f'Higher Ranked (Top {higher_avg_rank}) - Average',
-                        'RANK': f'Rank {start_rank}-{end_rank}',
-                        'TOTAL_SCORE': round(sum(avg_scores.values()), 2),
-                        **avg_scores
-                    })
-            
-            # Higher ranked universities - Maximum
-            if higher_max_enabled:
-                start_rank = max(1, target_rank - higher_max_rank)
-                end_rank = target_rank - 1
-                higher_max_schools = df[(df['YEAR'] == compare_year) & 
-                                      (pd.to_numeric(df['RANK'], errors='coerce') >= start_rank) & 
-                                      (pd.to_numeric(df['RANK'], errors='coerce') <= end_rank)]
-                
-                if not higher_max_schools.empty:
-                    max_scores = {}
-                    for ind, score_col, _ in INDICATORS:
-                        scores = pd.to_numeric(higher_max_schools[score_col], errors='coerce').dropna()
-                        max_score = scores.max() if len(scores) > 0 else 0
-                        max_scores[score_col] = round(max_score, 2)
-                    
-                    group_data.append({
-                        'NAME': f'Higher Ranked (Top {higher_max_rank}) - Maximum',
-                        'RANK': f'Rank {start_rank}-{end_rank}',
-                        'TOTAL_SCORE': round(sum(max_scores.values()), 2),
-                        **max_scores
-                    })
-            
-            # Same country universities - Average
-            if country_avg_enabled:
-                # Get all universities from the same country in the specified year
-                country_avg_schools = df[(df['YEAR'] == compare_year) & 
-                                       (df['COUNTRY'] == target_country)]
-                
-                if not country_avg_schools.empty:
-                    country_avg_scores = {}
-                    for ind, score_col, _ in INDICATORS:
-                        scores = pd.to_numeric(country_avg_schools[score_col], errors='coerce').dropna()
-                        avg_score = scores.mean() if len(scores) > 0 else 0
-                        country_avg_scores[score_col] = round(avg_score, 2)
-                    
-                    group_data.append({
-                        'NAME': f'Same Country (Top {country_avg_rank}) - Average',
-                        'RANK': f'All {len(country_avg_schools)} universities',
-                        'TOTAL_SCORE': round(sum(country_avg_scores.values()), 2),
-                        **country_avg_scores
-                    })
-            
-            # Same country universities - Maximum
-            if country_max_enabled:
-                # Get all universities from the same country in the specified year
-                country_max_schools = df[(df['YEAR'] == compare_year) & 
-                                       (df['COUNTRY'] == target_country)]
-                
-                if not country_max_schools.empty:
-                    country_max_scores = {}
-                    for ind, score_col, _ in INDICATORS:
-                        scores = pd.to_numeric(country_max_schools[score_col], errors='coerce').dropna()
-                        max_score = scores.max() if len(scores) > 0 else 0
-                        country_max_scores[score_col] = round(max_score, 2)
-                    
-                    group_data.append({
-                        'NAME': f'Same Country (Top {country_max_rank}) - Maximum',
-                        'RANK': f'All {len(country_max_schools)} universities',
-                        'TOTAL_SCORE': round(sum(country_max_scores.values()), 2),
-                        **country_max_scores
-                    })
-        
-        # Combine university and group data
-        all_comparison_data = []
-        
-        # Add university data (convert Series to dict)
-        for school_data in all_school_data:
-            school_dict = school_data.to_dict()
-            all_comparison_data.append(school_dict)
-        
-        # Add group data (already in dict format)
-        all_comparison_data.extend(group_data)
-        
-        if all_comparison_data:
+        if all_school_data:
             # Create comparison table
-            comparison_df = pd.DataFrame(all_comparison_data)
+            comparison_df = pd.DataFrame(all_school_data)
             
             # Select columns to display
             display_cols = ["NAME", "RANK", "TOTAL_SCORE"]
@@ -447,21 +305,12 @@ elif mode == "Compare Mode":
             show_comparison = comparison_df[display_cols].copy()
             
             # Column header beautification
-            col_rename = {"NAME": "University/Group", "RANK": "Rank", "TOTAL_SCORE": "Total Score"}
+            col_rename = {"NAME": "University", "RANK": "Rank", "TOTAL_SCORE": "Total Score"}
             for ind, score_col, rank_col in INDICATORS:
                 col_rename[score_col] = f"{ind} Score"
             
             show_comparison = show_comparison.rename(columns=col_rename)
-            show_comparison = show_comparison.replace({None: "None", "": "None", "-": "N/A"})
-            
-            # Hide Total Score for group comparisons (not universities)
-            for idx, row in show_comparison.iterrows():
-                university_group_name = row['University/Group']
-                # Check if this is a group comparison (contains keywords like "Higher Ranked", "Same Country")
-                is_group = any(keyword in university_group_name for keyword in ["Higher Ranked", "Same Country", "Average", "Maximum"])
-                if is_group:
-                    show_comparison.at[idx, 'Total Score'] = "-"
-            
+            show_comparison = show_comparison.replace({None: "None", "": "None"})
             show_comparison = show_comparison.reset_index(drop=True)
             show_comparison.index = show_comparison.index + 1
             
@@ -472,7 +321,7 @@ elif mode == "Compare Mode":
             
             # Prepare data for the chart
             chart_data = []
-            colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f']  # Extended colors for 8 targets
+            colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']  # Different colors for each university
             
             for idx, (_, row) in enumerate(comparison_df.iterrows()):
                 university_name = row['NAME']
@@ -510,7 +359,7 @@ elif mode == "Compare Mode":
             
             # Update layout
             fig.update_layout(
-                title=f"University and Group Score Comparison ({compare_year})",
+                title=f"University Score Comparison ({compare_year})",
                 xaxis_title="Indicators",
                 yaxis_title="Score",
                 height=500,
